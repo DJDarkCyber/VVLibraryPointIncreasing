@@ -122,7 +122,7 @@ class vvLibraryPointIncreaser:
             print("\rRequested --> "+str(self.count),end="")
             self.count+=1
             # req = requests.post(self.url, data=self.myDataCmt, headers=self.myHeader, proxies={"http": "http://" + self.proxies[random.randint(0, len(self.proxies)-1)], "https": "https://" + self.proxies[random.randint(0, len(self.proxies)-1)]})
-            req = requests.post(self.url, data=self.myDataCmt, headers=self.myHeader)
+            req = requests.post(self.url, data=self.myDataCmt, headers=self.myHeader, timeout=90)
         except Exception:
             pass
     
